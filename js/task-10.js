@@ -7,13 +7,15 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
+
+let size = 20;
+
 function createBoxes() {
   
   if (inputRef.value !== '') {
-
+    
     const boxes = [];
-    let size = 20;
-      
+
     for (let i = 1; i <= inputRef.value; i++) {
     
       let divbox = document.createElement("div");
@@ -33,6 +35,7 @@ function createBoxes() {
 }
 
 function destroyBoxes() {
+  size = 20;
   return boxesRef.innerHTML = '';
 }
 
